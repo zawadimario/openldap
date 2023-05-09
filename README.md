@@ -111,4 +111,4 @@ Use kubectl to check logs on Dex, OIDC Auth and OpenLDAP pods. It should be seen
 https://github.com/bitnami/containers/tree/main/bitnami/openldap
 
 ### Acknowledgement
-Zawadi Omari
+lernmat.mario@gmail.com
