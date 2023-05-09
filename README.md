@@ -101,10 +101,10 @@ Verify that the user was created, as well as preexisting users, group, etc
 ```
 ldapsearch -x -b 'dc=techtel,dc=com' 'objectclass=*'
 ```
-Proceed to create a profile that is to be bound to the email of the user/s created and login to Rlow
+Proceed to create a profile that is to be bound to the email of the user/s created and login to Kubeflow dashboard
 
 ### Logs
-Use kubectl to check logs on Dex, OIDC Auth and OpenLDAP pods. It should be seen that the user/s were successfully added and can login to Rflow.
+Use kubectl to check logs on Dex, OIDC Auth and OpenLDAP pods. It should be seen that the user/s were successfully added and can login to Kubeflow Dashboard.
 
 
 ### Links
