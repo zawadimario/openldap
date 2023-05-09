@@ -1,0 +1,36 @@
+# uidNumber and gidNumber are randomly decided for formality
+# The username and password used here are for testing only.
+
+dn: cn=edson.josh,ou=users,dc=techtel,dc=com
+cn: edson.josh
+sn: edson.josh@techtel.com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+mail: edson.josh@techtel.com
+userPassword:: cmFrdXRlbkAhMjM=
+uid: edson.josh
+uidNumber: 1001
+gidNumber: 1001
+homeDirectory: /home/edson.josh
+
+dn: cn=techtel.dev,ou=users,dc=techtel,dc=com
+cn: techtel.dev
+sn: techtel.dev@techtel.com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+mail: techtel.dev@techtel.com
+userPassword:: ZGV2QHRlbHVzMTIz
+uid: techtel.dev
+uidNumber: 1002
+gidNumber: 1002
+homeDirectory: /home/techtel.dev
+
+# Add users to group
+
+# dn: cn=developers,ou=users,dc=techtel,dc=com
+# objectClass: groupOfNames
+# cn: developers
+# member: cn=edson.josh,ou=users,dc=techtel,dc=com
+# member: cn=techtel.dev,ou=users,dc=techtel,dc=com
