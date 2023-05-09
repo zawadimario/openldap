@@ -1,0 +1,59 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: openldap
+  labels:
+    name: openldap
+  namespace: auth
+spec:
+  selector:
+    matchLabels:
+      app: openldap
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: openldap
+    spec:
+      serviceAccountName: openldap
+      containers:
+      - name: openldap
+        image: openldap-local:v1.1
+        imagePullPolicy: IfNotPresent
+        lifecycle:
+          postStart:
+            exec:
+              command:
+              - "/bin/bash"
+              - "-c"
+              - |
+                sleep 15s
+                ldapadd -x -D 'cn=adminuser,dc=techtel,dc=com' -w admin123 -f /ldap-ldif/user-entry.ldif
+        resources:
+          requests:
+            memory: 250Mi
+            cpu: 10m
+          limits:
+            memory: 500Mi
+            cpu: 100m
+        ports:
+        - name: tcp-ldap
+          containerPort: 389
+        volumeMounts:
+        - mountPath: "/root/ldap-ldif"
+          name: ldap-dir
+          readOnly: true
+        - name: ldif
+          mountPath: "/ldap-ldif/"
+          readOnly: true
+      volumes:
+      - name: ldif
+        configMap:
+          name: openldap
+          items:
+          - key: user-entry.ldif
+            path: user-entry.ldif
+      - name: ldap-dir
+        hostPath:
+          path: "/root/ldap-ldif"
+          type: DirectoryOrCreate
