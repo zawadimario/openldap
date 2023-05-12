@@ -8,9 +8,9 @@ This deployment consists of the following resources
 * Kustomization file to automate the deployment
 * Sample ldif, which is to be used as template only to add users' entries to the database
 
-Run the below command to deploy OpenLDAP Server
+Run the below command in the root direcroty to deploy OpenLDAP Server
 ```
-kustomize build openldap | kubectl apply -f - 
+kustomize build | kubectl apply -f - 
 ```
 ### Client side configurations
 
