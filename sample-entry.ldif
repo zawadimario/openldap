@@ -8,7 +8,7 @@ objectClass: inetOrgPerson
 objectClass: posixAccount
 objectClass: shadowAccount
 mail: edson.josh@techtel.com
-userPassword:: am9zaDEyMw==
+userPassword:: ZWRzb24xMjM=
 uid: edson.josh
 uidNumber: 1002
 gidNumber: 1002
@@ -27,18 +27,18 @@ uidNumber: 1003
 gidNumber: 1003
 homeDirectory: /home/techtel.dev
 
-dn: cn=john.doe,ou=users,dc=techtel,dc=com
-cn: john.doe
-sn: john.doe@techtel.com
+dn: cn=jon.doe,ou=users,dc=techtel,dc=com
+cn: jon.doe
+sn: jon.doe@techtel.com
 objectClass: inetOrgPerson
 objectClass: posixAccount
 objectClass: shadowAccount
-mail: john.doe@techtel.com
-userPassword:: am9objEyMw==
-uid: john.doe
+mail: jon.doe@techtel.com
+userPassword:: am9uMTIz
+uid: jon.doe
 uidNumber: 1004
 gidNumber: 1004
-homeDirectory: /home/john.doe
+homeDirectory: /home/jon.doe
 
 dn: cn=jane.doe,ou=users,dc=techtel,dc=com
 cn: jane.doe
