@@ -8,7 +8,7 @@ objectClass: inetOrgPerson
 objectClass: posixAccount
 objectClass: shadowAccount
 mail: edson.josh@techtel.com
-userPassword:: cmFrdXRlbkAhMjM=
+userPassword:: am9zaDEyMw==
 uid: edson.josh
 uidNumber: 1002
 gidNumber: 1002
