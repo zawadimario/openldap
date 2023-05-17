@@ -25,7 +25,7 @@ data:
     objectClass: posixAccount
     objectClass: shadowAccount
     mail: techtel.dev@techtel.com
-    userPassword:: ZGV2QHRlbHVzMTIz
+    userPassword:: YWRtaW4xMjM=
     uid: techtel.dev
     uidNumber: 1003
     gidNumber: 1003
