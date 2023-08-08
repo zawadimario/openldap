@@ -106,7 +106,20 @@ Proceed to create a profile that is to be bound to the email of the user/s creat
 ### Logs
 Use kubectl to check logs on Dex, OIDC Auth and OpenLDAP pods. It should be seen that the user/s were successfully added and can login to Kubeflow Dashboard.
 
+### Minio Console LDAP Connector
 
+Use the following Configs
+```
+LDAP Enabled Yes
+Server Insecure on
+Server Address openldap.auth:389
+Lookup Bind DN cn=adminuser,dc=techtel,dc=com
+Lookup Bind Password admin123
+User DN Search Base dc=techtel,dc=com
+User DN Search Filter (sAMAccountName=<%s username)
+Group Search Base DN dc=techtel,dc=com
+Group Search Filter (&(objectClass=groupOfNames)(member=%d))
+```
 ### Links
 https://github.com/bitnami/containers/tree/main/bitnami/openldap
 
