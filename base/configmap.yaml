@@ -51,7 +51,7 @@ data:
     objectClass: posixAccount
     objectClass: shadowAccount
     mail: jane.doe@techtel.com
-    userPassword:: amFuZTEyMw==
+    userPassword:: amFuZTEyMzQ=
     uid: jane.doe
     uidNumber: 1005
     gidNumber: 1005
