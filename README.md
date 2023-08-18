@@ -116,9 +116,9 @@ Server Address openldap.auth:389
 Lookup Bind DN cn=adminuser,dc=techtel,dc=com
 Lookup Bind Password admin123
 User DN Search Base dc=techtel,dc=com
-User DN Search Filter (sAMAccountName=<%s username)
-Group Search Base DN dc=techtel,dc=com
-Group Search Filter (&(objectClass=groupOfNames)(member=%d))
+User DN Search Filter (sn=%s)
+Group Search Base DN ou=users,dc=techtel,dc=com
+Group Search Filter (&(objectClass=group)(member=%d))
 ```
 ### Links
 https://github.com/bitnami/containers/tree/main/bitnami/openldap
