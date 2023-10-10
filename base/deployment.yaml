@@ -24,7 +24,7 @@ spec:
       containers:
       - name: openldap
         image: zawadimario/openldap:v1.0
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         lifecycle:
           postStart:
             exec:
