@@ -10,11 +10,11 @@ spec:
     matchLabels:
       app: openldap
   replicas: 1
-  strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxSurge: 1
-      maxUnavailable: 1
+  # strategy:
+  #   type: RollingUpdate
+  #   rollingUpdate:
+  #     maxSurge: 1
+  #     maxUnavailable: 1
   template:
     metadata:
       labels:
