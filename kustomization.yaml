@@ -1,5 +1,5 @@
 resources:
 - base/configmap.yaml
 - base/serviceaccount.yaml
-- base/deployment.yaml
+- base/statefulset.yaml
 - base/service.yaml
