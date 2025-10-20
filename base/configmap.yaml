@@ -91,7 +91,61 @@ data:
     objectClass: shadowAccount
     mail: admin.test@techtel.com
     userPassword:: YWRtaW4xMjM=
-    uid: admin
-    uidNumber: 1007
-    gidNumber: 1007
+    uid: admin.test
+    uidNumber: 1008
+    gidNumber: 1008
     homeDirectory: /home/admin.test
+
+    dn: ou=developers,ou=users,dc=techtel,dc=com
+    objectClass: top
+    objectClass: organizationalUnit
+    ou: developers
+
+    dn: cn=developers,ou=developers,ou=users,dc=techtel,dc=com
+    objectClass: top
+    objectClass: groupOfNames
+    cn: developers
+    member: cn=zawadi.omari,ou=users,dc=techtel,dc=com
+    member: cn=minio.admin,ou=users,dc=techtel,dc=com
+    member: cn=admin.test,ou=users,dc=techtel,dc=com
+
+    dn: ou=devops,ou=users,dc=techtel,dc=com
+    objectClass: top
+    objectClass: organizationalUnit
+    ou: devops
+
+    dn: cn=devops,ou=devops,ou=users,dc=techtel,dc=com
+    objectClass: top
+    objectClass: groupOfNames
+    cn: devops
+    member: cn=zawadi.omari,ou=users,dc=techtel,dc=com
+    member: cn=jane.doe,ou=users,dc=techtel,dc=com
+    member: cn=john.doe,ou=users,dc=techtel,dc=com
+    member: cn=admin.test,ou=users,dc=techtel,dc=com
+
+    dn: ou=data-engin,ou=users,dc=techtel,dc=com
+    objectClass: top
+    objectClass: organizationalUnit
+    ou: data-engin
+
+    dn: cn=data-engin,ou=data-engin,ou=users,dc=techtel,dc=com
+    objectClass: top
+    objectClass: groupOfNames
+    cn: data-engin
+    member: cn=zawadi.omari,ou=users,dc=techtel,dc=com
+    member: cn=minio.admin,ou=users,dc=techtel,dc=com
+    member: cn=admin.test,ou=users,dc=techtel,dc=com
+
+    dn: ou=security,ou=users,dc=techtel,dc=com
+    objectClass: top
+    objectClass: organizationalUnit
+    ou: security
+
+    dn: cn=security,ou=security,ou=users,dc=techtel,dc=com
+    objectClass: top
+    objectClass: groupOfNames
+    cn: security
+    member: cn=zawadi.omari,ou=users,dc=techtel,dc=com
+    member: cn=jane.doe,ou=users,dc=techtel,dc=com
+    member: cn=john.doe,ou=users,dc=techtel,dc=com
+    member: cn=admin.test,ou=users,dc=techtel,dc=com

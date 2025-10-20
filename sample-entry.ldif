@@ -53,6 +53,32 @@ uidNumber: 1005
 gidNumber: 1005
 homeDirectory: /home/jane.doe
 
+dn: cn=minio.admin,ou=users,dc=techtel,dc=com
+cn: minio.admin
+sn: minio.admin@techtel.com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+mail: minio.admin@techtel.com
+userPassword:: bWluaW9hZG1pbg==
+uid: minio.admin
+uidNumber: 1006
+gidNumber: 1006
+homeDirectory: /home/minio.admin
+
+dn: cn=zawadi.omari,ou=users,dc=techtel,dc=com
+cn: zawadi.omari
+sn: zawadi.omari@techtel.com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+mail: zawadi.omari@techtel.com
+userPassword:: bWFyaW8xMjM=
+uid: zawadi.omari
+uidNumber: 1007
+gidNumber: 1007
+homeDirectory: /home/zawadi.omari
+
 dn: cn=admin.test,ou=users,dc=techtel,dc=com
 cn: admin.test
 sn: admin.test@techtel.com
@@ -61,9 +87,9 @@ objectClass: posixAccount
 objectClass: shadowAccount
 mail: admin.test@techtel.com
 userPassword:: YWRtaW4xMjM=
-uid: admin
-uidNumber: 1006
-gidNumber: 1006
+uid: admin.test
+uidNumber: 1008
+gidNumber: 1008
 homeDirectory: /home/admin.test
 
 # Add users to group

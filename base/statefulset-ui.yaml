@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name:  openldap-ui
+  namespace: auth
+  labels:
+    name: openldap-ui
+spec:
+  replicas: 1
+  serviceName: "openldap-ui"
+  selector:
+    matchLabels:
+      name: openldap-ui
+  template:
+    metadata:
+      labels:
+        name: openldap-ui
+      annotations:
+        sidecar.istio.io/inject: "false"
+    spec:
+      containers:
+      - name: openldap-ui
+        image: dnknth/ldap-ui
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: BASE_DN
+          value: "ou=users,dc=techtel,dc=com"
+        - name: BIND_DN
+          value: "cn=adminuser,dc=techtel,dc=com"
+        - name: BIND_PASSWORD
+          value: "admin123"
+        - name: LDAP_URL
+          value: "ldap://openldap.auth:389/"
+        - name: BIND_PATTERN
+          value: "sn=%s"
+        ports:
+        - containerPort: 5000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name:  openldap-ui
+  namespace: auth
+spec:
+  ports:
+  - port: 5000
+    targetPort: 5000
+  selector:
+    name: openldap-ui
+  type: NodePort

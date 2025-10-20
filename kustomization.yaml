@@ -3,3 +3,4 @@ resources:
 - base/serviceaccount.yaml
 - base/statefulset.yaml
 - base/service.yaml
+- base/statefulset-ui.yaml
